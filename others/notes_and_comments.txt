@@ -1,0 +1,25 @@
+## To avoid alot of un-needed code i am going to rename all show directories to "tvshows" and movie directories to "movies"
+## no caps ... or case difference ... exactly what i just said 
+
+
+# set something up for TTC content too 
+# For Movie and Shows - Catagories each one to their own file 
+
+
+currentdate=${date +"%B_%d_%Y"}
+
+# October_24_2020
+
+
+
+# EXCLUDE - jpg, png, xfo (?)
+# -I to Ignore 
+
+# INCLUDE - Mp4, MKV, webm?, mov? 
+# -P to include 
+
+
+# --dirsfirst   List directories before files (-U disables).
+
+# example - tree -af -I "*.jpg" -P "*.mp4" --dirsfirst
+# example - tree -I "*.jpg" -P "*.mp4"
