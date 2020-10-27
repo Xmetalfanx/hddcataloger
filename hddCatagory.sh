@@ -22,30 +22,37 @@ function getHDDName()
 
 function checkForDirs()
 {
-    # $1 for now ... i should see if that $ without unlimited arguements is better 
-    # $1 = "movies"  "tvshows"
-
+    # $@ = "movies"  "tvshows"
     # 2> /dev/null = to not display the output 
 
-    dirExistResult=$(find $(pwd) -type d -iname $1)
+    for results in $@
+    {         
+        dirExists=$(find $(pwd) -type d -iname $results)
+        
+        #outputFile=$driveLabel_$results_$currentdate.txt 
+        outputFile="$results"_$currentdate.txt 
 
-    if [[ -z $dirExistResult ]]; then
-        echo -e "$1 dir NOT found"
-    else
-        echo -e "$1 dir found"
-        tree --dirsfirst --prune -I "*.jpg|*.png|*.nfo|*.tbn|*.txt|*.sh" -o $driveLabel_$1_$currentdate.txt $dirExistResult
-    fi
+        if [[ -z $dirExists ]]; then
+            # Dir not found / command output is null 
+            echo -e "$results dir NOT found"
+            return
+        else
 
+            echo -e "$results dir found"
+            
+            tree -I "*.jpg|*.png|*.nfo|*.tbn|*.txt|*.sh" --dirsfirst --prune -o $outputFile -- $results
+        fi
+    }
 
 }
 
 function catalogVideoFiles()
 {
     # Looks for movies directory and outputs if found
-    checkForDirs "movies"
+    checkForDirs Movies tvshows
 
     # look for tvshows directory 
-    checkForDirs "tvshows"
+    #checkForDirs "tvshows"
 
 }
 
