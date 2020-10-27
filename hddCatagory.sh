@@ -4,13 +4,10 @@
 currentdate=$(date +"%B_%d_%Y")
 # example output: October_24_2020
 
+# Gets the name of sdb 
 function getHDDName()
 {
   driveLabel=$(blkid | grep "/dev/sdb" | awk '/PARTLABEL/ { print $2 }' | sed 's/LABEL=//g;s/"//g')
-
-  # test 
-  #echo $driveLabel_$currentdate
-  #echo "foobar"_$currentdate
 }
 
 
@@ -24,6 +21,7 @@ function checkForDirs()
 {
     # $@ = "movies"  "tvshows"
     # 2> /dev/null = to not display the output 
+
 
     for results in $@
     {         
@@ -56,6 +54,26 @@ function catalogVideoFiles()
 
 }
 
+function copyToHomeFolder
+{
+    catalogHomeDir="/home/$USER/Documents/Catalog"
+
+    echo -e "Copying created text files to Home/Documents/Catalog folder"
+
+    if [ ! -d $catalogHomeDir ]; then
+        mkdir $catalogHomeDir
+    else
+        echo "$catalogHomeDir already exists"
+    fi 
+
+    # note to self: I think it's safe to say that all the catalog files I make will be .txt format so since the idea 
+    # is to have this script copied to the root of each hdd and ran from there maybe ... just cp'ing any txt file in the 
+    # hdd's root folder (only the root folder) should work ... no need to get hyper-specific 
+    
+    ## Here i should be in the hdd's root folder (when this script is placed there )
+    cp *.txt $catalogHomeDir 
+
+}
 
 
 getHDDName
