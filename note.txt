@@ -1,0 +1,7 @@
+i think I am going to move non-tvshow and non-movies into a main "videos" folder (including home movies)
+
+this txt file isa note to self for catalogging those files too ... giving myself direction later for how to do a "catch all" output file for that 
+
+i WANT the TTC related videos in a separate (from the catch-all catalog file) file though 
+
+MAYBE put all of those videos (in "Educational"  and than maybe a subdir "TTC" ... i can check specifically for that... doesn't matter but maybe keep the case in caps there )
