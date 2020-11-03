@@ -7,10 +7,10 @@
 function catalogVideoFiles()
 {
     
-    checkForDirs "movies" "tvshows" 
+    #checkForDirs "movies" "tvshows" 
 
     # run check for custom vids
-
+    checkForMoreVids
 }
 
 catalogVideoFiles
