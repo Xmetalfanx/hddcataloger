@@ -2,6 +2,7 @@
 . configs/universal.cfg
 . configs/shows_and_movies.cfg
 . configs/customVids.cfg
+. configs/music.cfg
 
 ####################################################################
 function catalogVideoFiles()
@@ -13,4 +14,7 @@ function catalogVideoFiles()
     checkForMoreVids
 }
 
-catalogVideoFiles
+#catalogVideoFiles
+
+reportMusicDirs $othersDir 
+#$rockDir $rapDir
