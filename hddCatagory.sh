@@ -8,13 +8,13 @@
 function catalogVideoFiles()
 {
     
-    #checkForDirs "movies" "tvshows" 
+    checkForDirs "movies" "tvshows" 
 
     # run check for custom vids
-    checkForMoreVids
+    #checkForMoreVids
 }
 
-#catalogVideoFiles
+catalogVideoFiles
 
-reportMusicDirs $othersDir 
+#reportMusicDirs $othersDir 
 #$rockDir $rapDir
