@@ -1,0 +1,20 @@
+Basically I have an if statement like the following
+
+$dir var's below are paths, for this explaination I am keeping it simple
+
+
+if [[ -d "$dirA" ] || [ -d "$dirB" ] || [ -d "$dirC" ]]; then 
+    ** the key and what is confusing me ... 
+    note: THESE ARE "ORs" between each check and IF ONE triggers only one should trigger (as "true")
+
+    What I want: to grab the one that triggers as true and assign it to a variable
+
+    say (ignore the horrible var name)
+
+    dirExistVar=$dirB 
+
+    I dont want to grab the other two that do not apply ... I thought of maybe something like checking "$?" but that doesn't make sense to me.
+    
+    Wouldn't that just say like "true" (or that via 0 and 1)? ... I want to know which one triggered not IF one triggered.
+    
+    The fact that I am in that part of the if statement would tell me that something triggered of course 

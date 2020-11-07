@@ -11,10 +11,7 @@ function catalogVideoFiles()
     checkForDirs "movies" "tvshows" 
 
     # run check for custom vids
-    #checkForMoreVids
+    checkForMoreVids
 }
 
 catalogVideoFiles
-
-#reportMusicDirs $othersDir 
-#$rockDir $rapDir
