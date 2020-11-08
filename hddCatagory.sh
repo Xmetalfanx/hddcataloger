@@ -11,7 +11,7 @@ function catalogVideoFiles()
     checkForDirs "movies" "tvshows" 
 
     # run check for custom vids
-    checkForMoreVids
+    checkForVideoDir
 }
 
 catalogVideoFiles
