@@ -9,9 +9,9 @@
 function catalogVideoFiles()
 {
     ## Checks for a movies and tvshows dir in the root of the ext. hdd being checked
-    #universalCheckForDirs "movies" "tvshows"
+    universalCheckForDirs "movies" "tvshows"
 
-    universalCheckForDirs "christmasRelated"
+    #universalCheckForDirs "christmasRelated"
 
     # run check for custom vids
     #checkForVideoDir
@@ -19,7 +19,15 @@ function catalogVideoFiles()
 
 catalogVideoFiles
 
-# remove any cat files in the script dir
-echo
-read -p "Removing catalog files in the script directory"
-rm *.txt
+
+function purgeCatalogFilesFromScriptDir
+{
+    # remove any cat files in the script dir
+    echo
+    read -p "Removing catalog files in the script directory"
+    rm *.txt
+
+
+}
+
+#purgeCatalogFilesFromScriptDir
