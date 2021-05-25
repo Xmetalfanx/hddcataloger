@@ -3,6 +3,7 @@
 . configs/variables.cfg
 . configs/universal.cfg
 . configs/customVids.cfg
+. configs/subDirSearches.cfg
 . configs/music.cfg
 
 #clear
@@ -16,7 +17,8 @@ function catalogMusicFiles()
 # not really needed but for the "root folders" that have audio and video files INSIDE
 function catalogMultiRoot()
 {
-    universalCheckForDirs "christmas_related" "tgc"
+    universalCheckForDirs "christmas_related" 
+    #"tgc"
 }
 
 function catalogVideoFiles()
@@ -29,12 +31,12 @@ function catalogVideoFiles()
     checkForVideoDir
 }
 
-catalogVideoFiles
+#catalogVideoFiles
 catalogMultiRoot
-catalogMusicFiles
+#catalogMusicFiles
 
 # Moved here to stop this from being run each pass through a check if a dir exists
 # this should target any catalog files in the script folder
 # ALSO i can probably put the purge code inside here now (once done right) so there is no need for another function
 # Function call to copy reports
-universalCopyReportFiles
+#universalCopyReportFiles
