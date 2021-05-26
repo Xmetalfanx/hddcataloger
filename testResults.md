@@ -9,8 +9,19 @@
 | /videos   |     |                       |                        |                    |                                     |
 
 ## Sub Level Checks
-### tgc 
-| Tasks     |     | Create Summary Report | Create Detailed Report | Add Freespace code | Move Files to appropriate locations |
-| --------- | --- | --------------------- | ---------------------- | ------------------ | ----------------------------------- |
-| audio     |     | Pass                  | Pass                   | Pass (Both)        |                                     |
-| videos    |     |                       |                        |                    |                                     | 
+
+# christmas
+
+| Tasks  |     | Create Summary Report | Create Detailed Report | Add Freespace code | Move Files to appropriate locations |
+| ------ | --- | --------------------- | ---------------------- | ------------------ | ----------------------------------- |
+| music  |     | N/A                   | Pass                   | Pass (Both)        |                                     |
+| movies |     | N/A                   |                        |                    |                                     |
+| OTR    |     | N/A                   | Fail                   |                    |                                     |
+| Videos |     | N/A                   |                        |                    |                                     |
+
+### tgc
+
+| Tasks  |     | Create Summary Report | Create Detailed Report | Add Freespace code | Move Files to appropriate locations |
+| ------ | --- | --------------------- | ---------------------- | ------------------ | ----------------------------------- |
+| audio  |     | Pass                  | Pass                   | Pass (Both)        |                                     |
+| videos |     |                       |                        |                    |                                     |

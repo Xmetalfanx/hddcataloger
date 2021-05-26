@@ -17,8 +17,7 @@ function catalogMusicFiles()
 # not really needed but for the "root folders" that have audio and video files INSIDE
 function catalogMultiRoot()
 {
-    universalCheckForDirs "christmas_related" 
-    #"tgc"
+    universalCheckForDirs "christmas_related" "tgc"
 }
 
 function catalogVideoFiles()
@@ -31,8 +30,8 @@ function catalogVideoFiles()
     checkForVideoDir
 }
 
-#catalogVideoFiles
-catalogMultiRoot
+catalogVideoFiles
+#catalogMultiRoot
 #catalogMusicFiles
 
 # Moved here to stop this from being run each pass through a check if a dir exists
