@@ -24,7 +24,7 @@ function catalogVideoFiles()
 {
     ## Checks for a movies and tvshows dir in the root of the ext. hdd being checked
     # things here should be in the root folder of the external hdd 
-    universalCheckForDirs "movies" "tvshows"
+    #universalCheckForDirs "movies" "tvshows"
 
     # run check for custom vids
     checkForVideoDir
