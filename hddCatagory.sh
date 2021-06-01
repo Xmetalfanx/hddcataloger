@@ -39,10 +39,10 @@ function catalogVideoFiles()
 }
 
 # Checks the tvshow, movies, and /videos dir
-#catalogVideoFiles
+catalogVideoFiles
 
 # checks for non-movie and non-tvshow root level items "Christmas Related" (name not exact in code) and "tgc" that have different SORTS of content inside 
-#catalogMultiRoot
+catalogMultiRoot
 
 # Checks for music directories
 catalogMusicFiles
@@ -51,4 +51,4 @@ catalogMusicFiles
 # this should target any catalog files in the script folder
 # ALSO i can probably put the purge code inside here now (once done right) so there is no need for another function
 # Function call to copy reports
-#universalCopyReportFiles
+universalCopyReportFiles
