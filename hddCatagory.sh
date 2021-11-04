@@ -19,8 +19,6 @@ catalogMultiRoot
 catalogMusicFiles
 
 
-
-
 # Moved here to stop this from being run each pass through a check if a dir exists
 # this should target any catalog files in the script folder
 # ALSO i can probably put the purge code inside here now (once done right) so there is no need for another function
