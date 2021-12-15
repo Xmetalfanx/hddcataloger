@@ -7,7 +7,23 @@ function searchFor()
     clear
     echo -e "Search Results for \"$searchTerm\" in $(pwd)"
 
-    grep -irw . --color -e "$searchTerm"
+    ###########################################################
+    # grep 
+    # -i, --ignore-case         ignore case distinctions in patterns and data
+      ## --no-ignore-case      do not ignore case distinctions (default)
+    # d-r, --recursive           like --directories=recurse
+    # -w, --word-regexp         match only whole words
+    ##############################################################
+
+    ################################################################
+    ## sort 
+    # -b: ignore leading blank's 
+    # -f: ignore cases 
+
+    #######################################################################
+    
+    
+    grep -irw -m 1 . --color -e "$searchTerm" | sort -bf
 }
 
 clear
