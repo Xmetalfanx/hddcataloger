@@ -1,21 +1,26 @@
 #!/bin/bash
 
-. configs/variables.cfg
-. configs/universal.cfg
-. configs/customVids.cfg
-. configs/subDirSearches.cfg
-. configs/music.cfg
+# loading config files
+
+
+echo "Loading config files"
+
+. configs/includes.cfg
+
 
 #clear
 ####################################################################
 
 # Checks the tvshow, movies, and /videos dir
+# location: configs/universal.cfg
 catalogVideoFiles
 
-# checks for non-movie and non-tvshow root level items "Christmas Related" (name not exact in code) and "tgc" that have different SORTS of content inside 
+# checks for non-movie and non-tvshow root level items "Christmas Related" (name not exact in code) and "tgc" that have different SORTS of content inside
+# location: configs/universal.cfg
 catalogMultiRoot
 
 # Checks for music directories
+# location:  configs/universal.cfg
 catalogMusicFiles
 
 

@@ -2,8 +2,7 @@
 
 ## This is here so i dont forget the code ... this is to search the COMPLETE dir of cat files
 
-function searchFor()
-{
+function searchFor() {
     clear
     echo -e "Search Results for \"$searchTerm\" in $(pwd)"
 
@@ -21,8 +20,17 @@ function searchFor()
     # -f: ignore cases 
 
     #######################################################################
-    
-    
+
+
+    # grep
+      # -i: ignore case
+      # -r: recursive
+      # -w, --word-regexp; match only whole words
+
+    # sort
+      # -b: ignore leading blanks
+      # -f: ignore ignore case/convert lower case to upper case 
+
     grep -irw -m 1 . --color -e "$searchTerm" | sort -bf
 }
 
