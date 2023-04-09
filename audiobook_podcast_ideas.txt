@@ -1,0 +1,19 @@
+with Podcasts and Audiobooks, they:
+
+- should be in the root level folder
+- the names (subdir's on level 1) are unknown but those names are the NAMES OF the podcast or audiobook
+
+
+function audiobookAndPodcasts {
+
+    ## ls -d "Audiobooks" "podcasts"
+    foobar=$(ls -d "Audiobooks" "podcasts")
+
+
+    # idea: assign the ls command above to a var
+    ## do a for-in loop, where the var is the "in" part
+
+    for results in
+
+
+}

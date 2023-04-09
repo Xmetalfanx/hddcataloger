@@ -2,8 +2,7 @@
 
 ## This is here so i dont forget the code ... this is to search the COMPLETE dir of cat files
 
-function searchFor()
-{
+function searchFor() {
     clear
     echo -e "Search Results for \"$searchTerm\" in $(pwd)"
 

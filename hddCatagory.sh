@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# loading config files 
 . configs/variables.cfg
 . configs/universal.cfg
 . configs/customVids.cfg
