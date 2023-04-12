@@ -15,8 +15,7 @@ driveLabel=$(basename $driveRoot)
 ### For where to store the created catalog files
 
 ```bash
-catalogHomeDir="$HOME/Documents/Catalog/"`
-localCatalogDir="$HOME/Documents/Catalog/"
+catalogHomeDir="$HOME/Documents/Catalog/"
 hddCatalogDir="$driveRoot/Catalogs"
 ```
 

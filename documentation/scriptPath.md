@@ -1,35 +1,44 @@
-# What happens when you run the script
+# Hard drive catagorizing scripts
 
-## 1 - [Read in Variables](/documentation/variables.md)
+## What happens when you run the script
 
-## 2 - *catalogVideoFiles* function
+## 1 - [Read in Variables](variables.md)
 
-### universalCheckForDirs function
+## 2 - *catalogVideoFiles* function runs
 
-- dev doc note to self: MAKE this section more generic so i can reference it elsewhere when other arguments are passed to it
-  - This function mentioned is used elsewhere in the script too, meaning it's NOT meant for only the main "tvshow" or "movies" check
+- Check for movies and/or tv shows - using *[universalCheckForDirs](universalCheckForDirs_function.md)* function
 
-- This function looks for the arguments passed (exactly as they are typed, case and all ) in the root folder of the drive
-  - IF found a variable for a filename is created that will store the "catalog" made from a *tree* command, later
-  - Passes to [*universalGetReports* function](/documentation/univesalGetsReports_function.md)
+- *[checkForVideoDir](checkforVideoDir_function)* function runs, checking for */videos* folder in the root of the target drive
 
-### 1 - Video check for Movies or TV Shows - using *universalCheckForDirs* function
+## 3 - catalogMultiRoot function, ran
 
-### 2 - *checkForVideoDir* function
+- This checks for *"christmas"* and TGC "The Great Courses" directories IN the target drive's root location.
+  - *christmas* contains various content ... music, movies, wallpapers etc
+  - note to self: despite overlap with a potention "history" sub directory, in "/videos" that may be created later (history content not related to TGC would be in the "educational" sub-directory now).... KEEP ALL TGC content here and not in that sub directory ... just for organization it keeps things neater if i forget if i mixed the content ... I may "waste" space by having like 5+ backups of the same thing  if i am unorganized
+- function used:
+  - [universalCheckForDirs](universalCheckForDirs_function.md)
 
-- **Main Function** -  Look for a "videos" directiory in the root folder of the drive
+## 4 - catalogMusicFiles
 
-- *Directory Structure*:
-  - This *videos* dir is for any videos (note: i am not totally sure about where to put say "DVD extras", for now) that are not *movie* or *tvshow* related.
-  - Subdirectories are searched for and the idea with this is that while I remember creating a "videos" mass catalog file for everything in a root directories "videos" folder,
-    - goal: these sub-directories I search for will make seperate "sub catagory" files that are easy to search through
+- functions used:
+  - [musicRootDirCheck]()
+  - [musicSubDirCheck]()
 
-- *Code path*
-  - 1 - check for the */videos* directory
-    - (if it's not there, there is no point to any of this other code)
-  - 2 - IF found, create a "master" (all sub-directories i check for later, ARE included) list for the */videos* directory found.
-    - this catalog file may be large and messy to read
-    - this task is done by using the *universalCheckForDirs* function that was already used once by this step for the *movies* and *tvshows* check
-  - 3 - Check for subdirectories contained in an array, using the *universalSubdirCheck* function
-    - array I have, for now is:
-      - `subDirSearch=("educational" "homevids" "themeparks")`
+
+- Checks for a */music* folder in the target drive's root location
+  - if found, the *mainDirMusicCheck* function is ran
+    1. Checks for */music/others* directory
+       - If found, uses the *otherSubDir* array to check for sub-directories inside
+       - function:
+         - *musicSubDirCheck*
+       - *otherSubDir array (for now):
+         - `othersSubDirs=("$classicalDir" "$jazzDir" "$moreDir" "$OTRDir")`
+         - Classical Music Directory, Jazz Directory, OTR (Old Time Radio Shows) Directory
+
+# mainDirMusicCheck
+
+## ONLY checks the subdirs existing IF the root (/Rock for example) exist or otherwise there is no point
+
+    [ -d $othersDir ] && musicRootDirCheck $othersDir && musicSubDirCheck "${othersSubDirs[@]}" "$eachMainDir"
+
+    [ -d $RockDir ] && musicRootDirCheck $rockDir && musicSubDirCheck "${rockSubDirs[@]}" "$eachMainDir"
