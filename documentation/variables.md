@@ -54,11 +54,11 @@ othersSubDirs=("$classicalDir" "$jazzDir" "$moreDir" "$OTRDir")
 # this would be in the root folder to make it easier to see
 christmasRelatedDir="$dirRoot/christmasRelated"
 
-customVidsDir="$driveRoot/videos"
+custom_vids_dir="$driveRoot/videos"
 
-homevidsDir="$customVidsDir/homevids"
-themeparkDir="$customVidsDir/themeparks"
-educationalDir="$customVidsDir/educational"
+homevidsDir="$custom_vids_dir/homevids"
+themeparkDir="$custom_vids_dir/themeparks"
+educationalDir="$custom_vids_dir/educational"
 TheGreatCoursesDir="$educationalDir/tgc"
 JGibsonDir="$educationalDir/jasongibson"
 ```

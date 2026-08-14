@@ -12,12 +12,12 @@ echo "Loading config files"
 ####################################################################
 
 # Checks the tvshow, movies, and /videos dir
-# location: configs/universal.cfg
-catalogVideoFiles
+# location: configs/cataloging.cfg
+catalog_video_files
 
 # checks for non-movie and non-tvshow root level items "Christmas Related" (name not exact in code) and "tgc" that have different SORTS of content inside
-# location: configs/universal.cfg
-catalogMultiRoot
+# location: configs/cataloging.cfg
+# catalog_multi_root
 
 # Checks for music directories
 # location:  configs/universal.cfg

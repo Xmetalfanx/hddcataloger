@@ -14,7 +14,7 @@
   - 2 - IF found, create a "master" (all sub-directories i check for later, ARE included) list for the */videos* directory found.
     - this task is done by using the *[universalCheckForDirs](universalCheckForDirs_function.md)* function
       - the same function used already used once by this step for the *movies* and *tvshows* check that happened "first"
-  - 3 - Check for "/videos" subdirectories contained in an array, using the *[universalSubdirCheck](universalSubdirCheck_function.md)* function
+  - 3 - Check for "/videos" subdirectories contained in an array, using the *[universal_subdir_check](universal_subdir_check_function.md)* function
     - array I have, for now is:
       - `subDirSearch=("educational" "homevids" "themeparks")`
       - *educational* - includes mainly random tutorials and stuff like that.
