@@ -1,9 +1,9 @@
-# musicSubDirCheck_function
+# music_sub_dir_check_function
 
 ```
 
 # function that is passed an array of sub dirs from, the root /music dir 
-function musicSubDirCheck() {
+function music_sub_dir_check() {
 
     # "as long as there is another subdir to check for"
     for subDirCheckFullPath in "${@}";  do

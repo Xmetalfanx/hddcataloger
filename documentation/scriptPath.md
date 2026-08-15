@@ -18,18 +18,18 @@
 - function used:
   - [universalCheckForDirs](functions/universalCheckForDirs_function.md)
 
-## 4 - catalogMusicFiles
+## 4 - catalog_music_files
 
 - functions used:
-  - [musicRootDirCheck](functions/musicRootDirCheck_function.md)
-  - [musicSubDirCheck](functions/musicSubDirCheck_function.md)
+  - [music_root_dir_check](functions/music_root_dir_check_function.md)
+  - [music_sub_dir_check](functions/music_sub_dir_check_function.md)
 
 - Checks for a */music* folder in the target drive's root location
   - if found, the *mainDirMusicCheck* function is ran
     1. Checks for */music/others* directory
        - If found, uses the *otherSubDir* array to check for sub-directories inside
        - function:
-         - *musicSubDirCheck*
+         - *music_sub_dir_check*
        - *otherSubDir array (for now):
          - `othersSubDirs=("$classicalDir" "$jazzDir" "$moreDir" "$OTRDir")`
          - Classical Music Directory, Jazz Directory, OTR (Old Time Radio Shows) Directory

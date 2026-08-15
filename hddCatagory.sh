@@ -17,11 +17,11 @@ catalog_video_files
 
 # checks for non-movie and non-tvshow root level items "Christmas Related" (name not exact in code) and "tgc" that have different SORTS of content inside
 # location: configs/cataloging.cfg
-# catalog_multi_root
+catalog_multi_root
 
 # Checks for music directories
 # location:  configs/universal.cfg
-catalogMusicFiles
+# catalog_music_files
 
 
 # Moved here to stop this from being run each pass through a check if a dir exists
