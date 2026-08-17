@@ -1,9 +1,9 @@
-# musicRootDirCheck_function
+# music_root_dir_check_function
 
 ```
 # the name of the function seems ok BUT ... it seems like the purpose of the function is the same as what is right below (function below )
 # I THINK this was suppose to be for the main (Rock. others) "root" level checking 
-function musicRootDirCheck() {
+function music_root_dir_check() {
 
     # what gets passed here IS a full path 
     mainDirFullPath="$@"
@@ -22,13 +22,13 @@ function musicRootDirCheck() {
         # File to store current ("current", in for loop) main Dir "Catalog file"
         # the idea here is to have a "master" catalog file of these main dirs ... sub sorting and whatnot is done later, IF needed
         
-        musicRootOutputFile=${driveLabel}"_"${currentDate}"_"${eachMainDirPath}"_music_MASTER_catalog.txt"
+        music_root_output_file=${driveLabel}"_"${currentDate}"_"${eachMainDirPath}"_music_MASTER_catalog.txt"
 
         # check for and sets up locations in $HOME and/or the target drive to STORE the catalog files 
-        setupCatagoryDir
+        setup_catagory_dir
 
         # if the mainDir path DOES exist create (after letting the user know the dir was found) the catalog file
-        [ -d ${eachMainDirPath} ] && clear && echo -e "${eachMainDirPath} directory was found" && tree --dirsfirst -n -P "*.mp3" ${eachMainDirPath} -o  "${musicRootOutputFile}"
+        [ -d ${eachMainDirPath} ] && clear && echo -e "${eachMainDirPath} directory was found" && tree --dirsfirst -n -P "*.mp3" ${eachMainDirPath} -o  "${music_root_output_file}"
 
     done
 }

@@ -22,8 +22,8 @@ hddCatalogDir="$driveRoot/Catalogs"
 ## Music variables
 
 ```
-musicDir="$driveRoot/music"
-musicCatalogDir="$musicDir/catalog"
+music_main_dir="$driveRoot/music"
+musicCatalogDir="$music_main_dir/catalog"
 ```
 
 - Comments:
@@ -32,11 +32,11 @@ musicCatalogDir="$musicDir/catalog"
 ### Genre related variables
 
 ```
-rockDir="$musicDir/Rock"
+rockDir="$music_main_dir/Rock"
 rockSubDirs=("$rockDir/AtoG" "$rockDir/HtoN" "$rockDir/OtoZ" )
 
-rapDir="$musicDir/Rap"
-othersDir="$musicDir/Others"
+rapDir="$music_main_dir/Rap"
+othersDir="$music_main_dir/Others"
 classicalDir="$othersDir/Classical"
 jazzDir="$othersDir/Jazz"
 moreDir="$othersDir/more"
